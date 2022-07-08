@@ -1,7 +1,7 @@
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class BFS implements Searchable{
+public class BFS extends Searchable{
     @Override
     public void search() throws InterruptedException {
         Queue<int[]> queue = new LinkedList<>();
@@ -25,9 +25,5 @@ public class BFS implements Searchable{
         }
 
         Thread.sleep(1000);
-    }
-
-    private static boolean isValid(int row, int col){
-        return !(row < 0 || row >= GridSpace.ROWS || col < 0 || col >= GridSpace.COLUMNS || GridSpace.get(row, col) != GridSpace.Status.EMPTY);
     }
 }
